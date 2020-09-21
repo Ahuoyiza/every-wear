@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import HomePage from "./pages/homepage/HomePage.component";
+import ShopPage from "./pages/shop/ShopPage";
 
 import "./App.css";
-
-const HatsPage = () => {
-  return (
-    <div>
-      <h1>Hats page</h1>
-    </div>
-  );
-};
 
 class App extends Component {
   render() {
@@ -18,7 +11,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/hats" component={HatsPage} />
+          <Route path="/shop" component={ShopPage} />
         </Switch>
       </div>
     );
