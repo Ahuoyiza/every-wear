@@ -45,7 +45,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
-          <Route exact path="/login" render={ () => this.props.currentUser ? (<Redirect to='/' />) : <LoginAndRegister /> }/>
+          <Route exact path="/login" render={ () => this.props.currentUser ? (<Redirect to= "/" />) : <LoginAndRegister /> }/>
         </Switch>
       </div>
     );
@@ -59,4 +59,4 @@ const mapStateToProps = ({ user}) => ({
 const mapDispatchToprops = dispatch => ({
    setCurrentUser: user => dispatch(setCurrentUser(user))
 });
-export default connect(null, mapDispatchToprops )(App);
+export default connect(mapStateToProps, mapDispatchToprops )(App);
